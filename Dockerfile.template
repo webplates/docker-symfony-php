@@ -16,5 +16,6 @@ RUN set -xe \
     && docker-php-ext-install -j$(nproc) iconv mbstring mcrypt intl pdo_mysql gd zip \
     && echo "[PHP]\n\ndate.timezone = UTC" > /usr/local/etc/php/php.ini \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=${COMPOSER_VERSION} \
-    && composer global require --quiet "hirak/prestissimo:^0.3"
+    && composer global require --quiet "hirak/prestissimo:^0.3" \
+    && rm -rf /usr/local/etc/php/php.ini
 {# Intentionally left double blank line #}
