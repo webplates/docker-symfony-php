@@ -17,3 +17,4 @@ RUN set -xe \
     && echo "[PHP]\n\ndate.timezone = UTC" > /usr/local/etc/php/php.ini \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=${COMPOSER_VERSION} \
     && composer global require --quiet "hirak/prestissimo:^0.3"
+{# Intentionally left double blank line #}
