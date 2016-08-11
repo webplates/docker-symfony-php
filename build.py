@@ -12,7 +12,9 @@ BUILDS = ["fpm"]
 DISTROS = ["alpine"]
 
 MATRIX = set(itertools.chain(
+    itertools.product(VERSIONS, [None], [None]),
     itertools.product(VERSIONS, BUILDS, [None]),
+    itertools.product(VERSIONS, [None], DISTROS),
     itertools.product(VERSIONS, BUILDS, DISTROS)
 ))
 
