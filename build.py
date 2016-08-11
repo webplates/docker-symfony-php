@@ -8,14 +8,14 @@ DIST = "dist"
 REPO = "webplates/symfony-php"
 
 VERSIONS = ["5.5.38", "5.6.24", "7.0.9"]
-BUILDS = ["fpm"]
+VARIANTS = ["fpm"]
 DISTROS = ["alpine"]
 
 MATRIX = set(itertools.chain(
     itertools.product(VERSIONS, [None], [None]),
-    itertools.product(VERSIONS, BUILDS, [None]),
+    itertools.product(VERSIONS, VARIANTS, [None]),
     itertools.product(VERSIONS, [None], DISTROS),
-    itertools.product(VERSIONS, BUILDS, DISTROS)
+    itertools.product(VERSIONS, VARIANTS, DISTROS)
 ))
 
 # Prepare Jinja
