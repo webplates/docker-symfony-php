@@ -16,9 +16,9 @@ def get_tags(image):
     php_version = semver.parse(image[0])
     php_versions = []
 
-    if php_version["major"] == 5:
-        if php_version["minor"] == 6:
-            php_versions.append("5")
+    if php_version["major"] == 7:
+        if php_version["minor"] == 0:
+            php_versions.append("7")
     else:
         php_versions.append(str(php_version["major"]))
 
