@@ -8,7 +8,7 @@ DIST = "dist"
 REPO = "webplates/symfony-php"
 
 VERSIONS = ["5.6.25", "7.0.10"]
-VARIANTS = ["fpm"]
+VARIANTS = ["fpm", "cli"]
 DISTROS = ["alpine"]
 
 MATRIX = set(itertools.chain(
