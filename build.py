@@ -37,7 +37,7 @@ for image in MATRIX:
     path = DIST + "/" + matrix_join((minorize(image[0]),) + image[1:], "/")
     os.makedirs(path, exist_ok=True)
     dockerfile = path + "/Dockerfile"
-    template.stream(parent=matrix_join(image, "-"), distro=image[2]).dump(dockerfile)
+    template.stream(parent=matrix_join(image, "-"), distro=image[2], php_major=majorize(image[0])).dump(dockerfile)
     paths.append(path)
     tags.append(set(get_tags(image)))
 
