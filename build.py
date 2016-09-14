@@ -7,7 +7,7 @@ from helper import *
 DIST = "dist"
 REPO = "webplates/symfony-php"
 
-VERSIONS = ["5.6.25", "7.0.10"]
+VERSIONS = ["5.4.45", "5.6.25", "7.0.10"]
 VARIANTS = ["fpm"]
 DISTROS = ["alpine"]
 
