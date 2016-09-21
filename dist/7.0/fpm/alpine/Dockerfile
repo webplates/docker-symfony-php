@@ -1,4 +1,4 @@
-FROM php:7.0.10-fpm-alpine
+FROM php:7.0.11-fpm-alpine
 
 ENV COMPOSER_VERSION=1.1.0 COMPOSER_ALLOW_SUPERUSER=1 COMPOSER_PATH=/usr/local/bin
 ENV SYMFONY_ENV prod
