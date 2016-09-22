@@ -9,6 +9,7 @@ RUN set -xe \
 {%- if distro == None %}
     && apt-get update \
     && apt-get install -qqy git libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng12-dev libicu-dev unzip \
+    && chown -R www-data. /var/www \
 {%- elif distro == "alpine" %}
     && apk add --no-cache git openssh-client coreutils freetype-dev libjpeg-turbo-dev libltdl libmcrypt-dev libpng-dev icu icu-libs icu-dev unzip \
 {%- endif %}

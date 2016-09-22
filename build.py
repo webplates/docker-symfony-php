@@ -44,8 +44,8 @@ for image in MATRIX:
 with open(".auth", "r") as f:
     token = f.readline().rstrip()
 
-delete_builds(REPO, token)
-add_builds(REPO, token, paths, tags)
+# delete_builds(REPO, token)
+# add_builds(REPO, token, paths, tags)
 
 FORMAT = "%-35s %s"
 print (FORMAT % ("PATH", "TAG"))
