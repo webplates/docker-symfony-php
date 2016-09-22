@@ -7,7 +7,7 @@ from helper import *
 DIST = "dist"
 REPO = "webplates/symfony-php"
 
-VERSIONS = ["5.4.45", "5.6.26", "7.0.11"]
+VERSIONS = ["5.6.26", "7.0.11"]
 VARIANTS = ["fpm"]
 DISTROS = ["alpine"]
 
@@ -44,8 +44,8 @@ for image in MATRIX:
 with open(".auth", "r") as f:
     token = f.readline().rstrip()
 
-# delete_builds(REPO, token)
-# add_builds(REPO, token, paths, tags)
+delete_builds(REPO, token)
+add_builds(REPO, token, paths, tags)
 
 FORMAT = "%-35s %s"
 print (FORMAT % ("PATH", "TAG"))
